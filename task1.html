@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center><h2>Task 1</h2></center>
+<hr>
+<table border="2">
+<tr>
+	<th><button onclick="home()">Home</button></th>
+	<th rowspan="3"><div id="text"></div></th>
+</tr>
+<tr>
+	<th><button onclick="About()">About Us</button></th>
+</tr>
+<tr>	
+	<th><button onclick="Services()">Services</button></th>
+</tr>	
+</table>
+<script>
+	function home()
+	{
+		document.getElementById('text').innerHTML="<div> Welcome To Home </div>";
+	}
+	function About()
+	{
+		document.getElementById('text').innerHTML="<div> We are a team who provide the IT solution</div>"
+	}
+	function Services()
+	{
+		document.getElementById('text').innerHTML="<div><ul> <li>Web Development </li><li> Software Development </li></ul></div>";
+	}
+</script>
+</body>
+</html>

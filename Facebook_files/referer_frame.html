@@ -1,0 +1,44 @@
+
+<!-- saved from url=(0082)https://fbsbx.com/captcha/recaptcha/iframe/?referer=https%3A%2F%2Fwww.facebook.com -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./recaptcha__en.js.download"></script><script type="text/javascript">
+      (function() {
+        var height = 78;
+
+        function resizeParent() {
+          var iframes = document.getElementsByTagName('iframe');
+          var maxHeight = 78;
+
+          for(var i = 0; i < iframes.length; i++) {
+            var iframe = iframes[i];
+            if (window.getComputedStyle) {
+              var style = window.getComputedStyle(iframe);
+              if (style.visibility === 'hidden' || style.opacity === 0) {
+                continue;
+              }
+            }
+            maxHeight = Math.max(iframe.offsetHeight, maxHeight);
+          }
+
+          if (maxHeight != height) {
+            height = maxHeight;
+            window.parent.postMessage(
+              {type: 1, size: {height: maxHeight}},
+              "https:\/\/www.facebook.com",
+            );
+          }
+        }
+
+        window.addEventListener('message', function(event) {
+          if (event.origin !== 'https://www.google.com') return;
+          resizeParent();
+          setTimeout(resizeParent, 400);
+        });
+
+        window.successCallback = function (token) {
+          window.parent.postMessage(
+            {type: 2, token: token},
+            "https:\/\/www.facebook.com",
+          );
+        };
+      })();
+    </script><script src="./api.js.download"></script></head><body><div class="g-recaptcha" data-callback="successCallback" data-sitekey="6Lc9qjcUAAAAADTnJq5kJMjN9aD1lxpRLMnCS2TR"><div style="width: 304px; height: 78px;"><div><iframe src="./anchor.html" width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div><div style="visibility: hidden; position: absolute; width:100%; top: -10000px; left: 0px; right: 0px; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: #fff; opacity: 0.5;  filter: alpha(opacity=50)"></div><div style="margin: 0 auto; top: 0px; left: 0px; right: 0px; position: absolute; border: 1px solid #ccc; z-index: 2000000000; background-color: #fff; overflow: hidden;"><iframe title="recaptcha challenge" src="./bframe.html" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" name="x7yit8l6qoef" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
