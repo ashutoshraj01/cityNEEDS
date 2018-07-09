@@ -5,5 +5,6 @@
 ![screenshot from 2018-07-09 19-25-02](https://user-images.githubusercontent.com/29220792/42455126-0217c36a-83af-11e8-86db-2a991e1c9b73.png)
 
 
+[Screenshots_of_Project.pdf](https://github.com/ashutoshraj01/cityNEEDS/files/2176632/Screenshots_of_Project.pdf)
 
 
